@@ -1,0 +1,39 @@
+###################################################################
+
+######    This is a short description of the project:  ############
+
+###################################################################
+
+
+####### TIME STEP CALLIBRATION  ##################################
+For the first part of the problem (Time step calibration) I created a function F() which generates 12 differential eqautions in the following format:
+
+### For Earth:
+
+drx/dt  = Vx      // equation 0
+dVx/dt = funct(); //equation 1
+
+dry/dt  = Vy      // equation 2
+dVy/dt = funct(); //equation 3
+
+### For Sun:
+
+ the same as for Earth system //equations 4 - 7
+
+
+
+### The initial parameters:
+For this system are written from the terminal into y[4*NBODY] array with the folloving format:
+for 1 body:
+             {"0", "1", “2*NBODY”,… “2NBODY-1” }= {x0, y0,... vx0, vy0,...} 
+
+
+
+
+
+
+
+
+
+
+
