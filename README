@@ -1,39 +1,27 @@
-###################################################################
+##########################################################################################
+To compile the program you need to run make file:
 
-######    This is a short description of the project:  ############
+          make
 
-###################################################################
+#########################################################################################
 
+To calculate NxN system of linear equation that has the following form:
 
-####### TIME STEP CALLIBRATION  ##################################
-For the first part of the problem (Time step calibration) I created a function F() which generates 12 differential eqautions in the following format:
+a00 x0 + a01 x1 + ... + a0(n-1) x(n-1) = b0
+...........
+a(n-1)0 x0 + a(n-1)1 x1 + ... + a(n-1)(n-1) x(n-1) = b(n-1)
 
-### For Earth:
-
-drx/dt  = Vx      // equation 0
-dVx/dt = funct(); //equation 1
-
-dry/dt  = Vy      // equation 2
-dVy/dt = funct(); //equation 3
-
-### For Sun:
-
- the same as for Earth system //equations 4 - 7
+you need to put your coefficience in arrayA.dat (for a(i)(i) coeffisients) and arrayB.dat (for b(i) coefficients) and then 
 
 
+#########################################################################################
+To run the code:
 
-### The initial parameters:
-For this system are written from the terminal into y[4*NBODY] array with the folloving format:
-for 1 body:
-             {"0", "1", “2*NBODY”,… “2NBODY-1” }= {x0, y0,... vx0, vy0,...} 
-
+    ./run arrayA.dat arrayB.dat
 
 
+#########################################################################################
+As an output you will get the values of your unknowns x0 .... x(n-1).
 
 
-
-
-
-
-
-
+ 
